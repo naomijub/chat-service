@@ -13,15 +13,15 @@ defmodule ChatServiceWeb.BankChannel do
   # Channels can be used in a request/response fashion
   # by sending replies to requests from the client
   @impl true
-  def handle_in("ping", payload, socket) do
+  def handle_in("transact", payload, socket) do
     {:reply, {:ok, payload}, socket}
   end
 
   # It is also common to receive messages from the client and
   # broadcast to everyone in the current topic (bank:lobby).
   @impl true
-  def handle_in("shout", payload, socket) do
-    broadcast socket, "shout", payload
+  def handle_in("community", payload, socket) do
+    broadcast socket, "community", payload
     {:noreply, socket}
   end
 

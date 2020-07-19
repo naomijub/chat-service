@@ -29,3 +29,31 @@
 .alert:empty {
   display: none;
 }
+
+#chat-box {
+  border: 1px #ccc solid;
+  padding: 0 0 0 5px;
+  min-height: 157px;
+  max-height: 225px;
+  overflow: scroll;
+}
+
+#chat-form {
+  margin-top: 1rem;
+  width:760px;
+}
+
+#chat-form input[type="text"] {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+#chat-form textarea {
+  width: 760px;
+  min-height: 150px;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
