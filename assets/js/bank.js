@@ -12,7 +12,7 @@ let BankService = {
         let userName = document.getElementById('user-name').value
         let userMsg = document.getElementById('user-text').value
   
-        channel.push('community', {name: userName, body: userMsg})
+        channel.push('community', {user: userName, body: userMsg})
   
         document.getElementById('user-name').value = ''
         document.getElementById('user-text').value = ''
@@ -22,7 +22,7 @@ let BankService = {
         let chatBox = document.querySelector('#chat-box')
         let msgBlock = document.createElement('p')
   
-        msgBlock.insertAdjacentHTML('beforeend', `<b>${payload.name}:</b> ${payload.body}`)
+        msgBlock.insertAdjacentHTML('beforeend', `<b>${payload.user}:</b> ${payload.body}`)
         chatBox.appendChild(msgBlock)
       })
     }

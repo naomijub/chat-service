@@ -18,7 +18,11 @@ defmodule ChatService.Chats do
 
   """
   def list_messages do
-    Repo.all(Message)
+    query = from m in Message,
+            limit: 40,
+            select: m
+
+    Repo.all(query)
   end
 
   @doc """
