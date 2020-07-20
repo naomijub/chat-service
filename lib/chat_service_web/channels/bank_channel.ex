@@ -3,19 +3,8 @@ defmodule ChatServiceWeb.BankChannel do
   alias ChatService.Chats
 
   @impl true
-  def join("bank:lobby", payload, socket) do
-    if authorized?(payload) do
-      {:ok, socket}
-    else
-      {:error, %{reason: "unauthorized"}}
-    end
-  end
-
-  # Channels can be used in a request/response fashion
-  # by sending replies to requests from the client
-  @impl true
-  def handle_in("transact", payload, socket) do
-    {:reply, {:ok, payload}, socket}
+  def join("bank:lobby", _payload, socket) do
+    {:ok, socket}
   end
 
   # It is also common to receive messages from the client and
@@ -25,10 +14,5 @@ defmodule ChatServiceWeb.BankChannel do
     Chats.create_message(payload)
     broadcast socket, "community", payload
     {:noreply, socket}
-  end
-
-  # Add authorization logic here as required.
-  defp authorized?(_payload) do
-    true
   end
 end
