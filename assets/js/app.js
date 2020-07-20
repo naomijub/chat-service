@@ -13,6 +13,6 @@ import "../css/app.scss"
 import socket from "./socket"
 //
 import "phoenix_html"
-import BankService from "./bank"
+import CommunityService from "./community"
 
-BankService.init(socket)
+CommunityService.init(socket)

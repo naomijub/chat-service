@@ -3,7 +3,7 @@ defmodule ChatServiceWeb.UserSocket do
 
   ## Channels
   # channel "room:*", ChatServiceWeb.RoomChannel
-  channel "bank:*", ChatServiceWeb.BankChannel
+  channel "community:*", ChatServiceWeb.CommunityChannel
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
   # verification, you can put default assigns into

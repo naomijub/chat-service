@@ -1,6 +1,6 @@
-let BankService = {
+let CommunityService = {
     init(socket) {
-      let channel = socket.channel('bank:lobby', {})
+      let channel = socket.channel('community:lobby', {})
       channel.join()
       this.listenForChats(channel)
     },
@@ -28,4 +28,4 @@ let BankService = {
     }
   }
   
-  export default BankService
+  export default CommunityService

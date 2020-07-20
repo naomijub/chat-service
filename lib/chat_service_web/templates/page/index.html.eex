@@ -1,4 +1,4 @@
-<h2>Bank Chat Service</h2>
+<h2>Community Chat Service</h2>
 <div id="chat-box">
   <%= for message <- @messages do %>
     <p><b><%= message.user %>:</b> <%= message.body %> </p>
